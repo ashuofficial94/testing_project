@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1024">
+        <link rel="stylesheet" href="/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/home.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <script src="/jquery.min.js"></script>
+        <script src="/bootstrap.min.js"></script>
+        <script src="/js/home.js" defer></script>
+        <title><%=docTitle%></title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="operations-panel">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#sqrt"><strong>Square Root</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#fact"><strong>Factorial</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#nlog"><strong>Natural Log</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#exp"><strong>Exponential</strong></a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane container active" id="sqrt">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Enter the number:</strong>
+                                    </label>
+                                </td>
+                                <td><input type="number" id="sqrt-number" onkeyup="sqrt()"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Result (√n):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="float" id="sqrt-result" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane container fade" id="fact">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Enter the number:</strong>
+                                    </label>
+                                </td>
+                                <td><input type="number" id="fact-number" onkeyup="fact()"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Result (n!):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="float" id="fact-result" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane container fade" id="nlog">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Enter the number:</strong>
+                                    </label>
+                                </td>
+                                <td><input type="number" id="log-number" onkeyup="log()"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Result (log<sub>e</sub>n):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="float" id="log-result" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane container fade" id="exp">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Enter the number (x):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="number" id="base-number" onkeyup="exp()"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Enter the exponent (y):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="number" id="exp-number" onkeyup="exp()"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <strong>Result (x<sup>y</sup>):</strong>
+                                    </label>
+                                </td>
+                                <td><input type="float" id="exp-result" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">Ashutosh Bajpai [MT2020033]</div>
+        </div>
+    </body>
+</html>
