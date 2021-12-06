@@ -7,7 +7,7 @@ import bodyParser = require("body-parser");
 import rootDir from "./utils/path";
 import {router as homeRouter} from './routes/home';
 
-console.log(JSON.stringify(fs));
+// console.log(JSON.stringify(fs));
 const app = express();
 
 app.set("view engine", "ejs");

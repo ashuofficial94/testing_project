@@ -1,38 +1,37 @@
-"use strict";
-var sqrt_input = document.querySelector("#sqrt-number");
-var sqrt_result = document.querySelector("#sqrt-result");
-var fact_input = document.querySelector("#fact-number");
-var fact_result = document.querySelector("#fact-result");
-var log_input = document.querySelector("#log-number");
-var log_result = document.querySelector("#log-result");
-var base_input = document.querySelector("#base-number");
-var exp_input = document.querySelector("#exp-number");
-var exp_result = document.querySelector("#exp-result");
-function sqrt() {
-    if (sqrt_input.value.length === 0)
-        sqrt_result.value = "";
-    var num = parseFloat(sqrt_input.value);
-    sqrt_result.value = Math.sqrt(num).toString();
-}
-function fact() {
-    var fact = 1;
-    if (fact_input.value.length === 0)
-        fact_input.value = "";
-    var num = parseFloat(fact_input.value);
-    for (var i = 2; i <= num; i++)
-        fact *= i;
-    fact_result.value = fact.toString();
-}
-function log() {
-    if (log_input.value.length === 0)
-        log_result.value = "";
-    var num = parseFloat(log_input.value);
-    log_result.value = Math.log(num).toString();
-}
-function exp() {
-    if (base_input.value.length === 0 || exp_input.value.length === 0)
-        exp_result.value = "";
-    var x = parseFloat(base_input.value);
-    var y = parseFloat(exp_input.value);
-    exp_result.value = Math.pow(x, y).toString();
-}
+let form1 = document.getElementById('form');
+
+form1.addEventListener('submit', () => {
+
+    let input1 = document.getElementById("input1").value;
+    let input2 = document.getElementById("input2").value;
+    let input3 = document.getElementById("input3").value;
+
+    let message = "";
+    let valid = true;
+
+    if(input1.length != 3) {
+        message += "Input 1 invalid.\n";
+        valid = false;
+    }
+
+    for(let index in input2) {
+        if(input2.charAt(index) < 'a' || input2.charAt(index) > 'z') {
+            message += "Input 2 invalid.\n";
+            valid = false;
+            break;
+        }
+    }
+
+    for(let index in input3) {
+        if(input3.charAt(index) < '0' || input3.charAt(index) > '9') {
+            message += "Input 3 invalid.\n";
+            valid = false;
+            break;
+        }
+    }
+
+    if(!valid) {
+        alert(message);
+        event.preventDefault();
+    }
+});

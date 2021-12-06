@@ -4,12 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
-var fs_1 = __importDefault(require("fs"));
 var express = require("express");
 var bodyParser = require("body-parser");
 var path_2 = __importDefault(require("./utils/path"));
 var home_1 = require("./routes/home");
-console.log(JSON.stringify(fs_1.default));
+// console.log(JSON.stringify(fs));
 var app = express();
 app.set("view engine", "ejs");
 app.set("views", "dist/views");
