@@ -5,6 +5,7 @@ form1.addEventListener('submit', () => {
     let input1 = document.getElementById("input1").value;
     let input2 = document.getElementById("input2").value;
     let input3 = document.getElementById("input3").value;
+    let input4 = document.getElementById("input4").value;
 
     let message = "";
     let valid = true;
@@ -25,6 +26,14 @@ form1.addEventListener('submit', () => {
     for(let index in input3) {
         if(input3.charAt(index) < '0' || input3.charAt(index) > '9') {
             message += "Input 3 invalid.\n";
+            valid = false;
+            break;
+        }
+    }
+
+    for(let index in input4) {
+        if(input4.charAt(index) < 'A' || input4.charAt(index) > 'Z') {
+            message += "Input 4 invalid.\n";
             valid = false;
             break;
         }
